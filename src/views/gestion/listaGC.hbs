@@ -1,0 +1,55 @@
+{{#if gestionesC}}
+
+<a href="/profile" class="btn btn-success">
+  Volver
+</a>
+
+<a href="/gestion/nuevaG" class="btn btn-success">
+  Realizar una Gestion
+</a>
+
+<table class="table table-bordered table-hover bg-success mt-5">
+  <div class="text-center">
+    <h1>Gestiones Cliente</h1>
+  </div>
+  <thead>
+    <tr>
+      <th><strong>Id</strong></th>
+       <th><strong>Codigo de La Gestion</strong></th>
+       <th><strong>Atendido</strong></th>
+       <th><strong>Gestion</strong></th>
+        <th><strong>Fecha de Creacion </strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each gestionesC}}
+    <tr>
+      <td>{{id}}</td>
+      <td>{{gestion_id}}</td>
+      <td>{{atendido}}</td>
+       <td>{{nombreG}}</td>
+      <td>{{timeago created_at}}</td>
+
+
+      <td>
+
+       <a class="btn btn-danger" href="/gestion/deleteGC/{{id}}">
+        Eliminar Gestion Cliente
+       </a>
+
+      </td>
+      {{/each}}
+  </tbody>
+</table>
+{{else}}
+<div class="h-100 d-flex align-items-center justify-content-center">
+  <div class="text-center text-white">
+    <h1>No Hay Gestiones de Clientes Aun</h1>
+    <img src="" class="w-75" />
+    <a href="/gestion/nuevaG" class="btn btn-success">
+      Realizar Gestion
+    </a>
+  </div>
+
+</div>
+{{/if}}

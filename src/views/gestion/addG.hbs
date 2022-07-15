@@ -1,0 +1,31 @@
+<div class="container p-4">
+    <div class="row">
+        <div class="col-md-4 mx-auto">
+
+            <div class="card">
+                <div class="card-body">
+                    <form action="/gestion/addG" method="POST">
+                        <div class="form-group">
+                            <input type="text" name="name" class="form-control" placeholder="Nombre de Gestion"
+                                autofocus>
+                        </div>
+                        <div class="form-group ">
+                            <select class="form-select" aria-label="Default select example" name="aplica">
+                                <option>Aplica Visita Tecnica</option> 
+                                <option><p>SI</p></option>
+                                <option><p>NO</p></option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <button class="btn btn-success btn-block">
+                                Save
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

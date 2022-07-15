@@ -1,0 +1,54 @@
+{{#if gestiones}}
+
+<a href="/profile" class="btn btn-success">
+  Volver
+</a>
+
+<a href="/gestion/addG" class="btn btn-success">
+  Agregar Gestion
+</a>
+
+<table class="table table-bordered table-hover bg-success mt-5">
+  <div class="text-center">
+    <h1>Gestiones</h1>
+  </div>
+  <thead>
+    <tr>
+      <th><strong>Nombre</strong></th>
+      <th><strong>Aplica-> 1=si/0=No</strong></th>
+       <th><strong>Fecha De Creacion</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each gestiones}}
+    <tr>
+      <td>{{name}}</td>
+      <td>{{aplica}}</td>
+      <td>{{timeago created_at}}</td>
+
+
+      <td>
+
+       <a class="btn btn-danger" href="/gestion/deleteG/{{id}}">
+        Eliminar Gestion
+       </a>
+       <a class="btn btn-secondary" href="/gestion/editG/{{id}}">
+        Editar
+        </a>
+
+      </td>
+      {{/each}}
+  </tbody>
+</table>
+{{else}}
+<div class="h-100 d-flex align-items-center justify-content-center">
+  <div class="text-center text-white">
+    <h1>No Hay Gestiones Ingresadas Aun</h1>
+    <img src="" class="w-75" />
+    <a href="/" class="btn btn-success">
+      Agregar Gestion
+    </a>
+  </div>
+
+</div>
+{{/if}}

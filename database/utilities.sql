@@ -1,0 +1,4 @@
+-- ELIMINAR TODAS LAS FILAS
+DELETE FROM users;
+
+DROP table gestion;

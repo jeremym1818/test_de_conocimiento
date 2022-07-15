@@ -1,0 +1,103 @@
+<div class="d-flex" >
+      <div id="sidebar-container" class="hola">
+    <div class="logo text-dark fw-bold  font-italic mx-auto">
+       <strong>Perfil</strong>
+    </div>
+
+    <div class="menu lead">
+        <a href="/profile" class="d-block p-3 text-dark fw-bold "><i class="fa-solid fa-house" ></i> Inicio</a>
+        <a href="/gestion" class="d-block p-3 text-dark fw-bold"><i class="fa-solid fa-school-circle-check"></i>Gestiones</a>
+         <a href="/gestion/gestionC" class="d-block p-3 text-dark fw-bold"><i class="fa-solid fa-school-circle-check"></i>Gestiones Cliente</a>
+    </div>
+</div> 
+        <div class="w-100">
+
+<!-- Contenido principal-->
+              <div id="contenido" class="pt-3 px-3">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-12">
+                      <h4 class="text-dark display-2"><Strong>Bienvenido {{user.name}}</Strong></h4>                      
+                    </div>
+                  </div>
+                  
+                  <div class="row mt-4">
+                    <div class="col-12">
+                      <h4 class="text-grey font-italic">Información de Interes</h4>
+                    </div>
+                  </div>
+
+                  <!-- Cards -->
+                  <div class="row">
+                    <!-- Card 1-->
+                    <div class="col-md-4">
+                      <div class="card text-bg-warning">
+                        <div class="card-body">
+                          <div class="row">
+                            <div class="col-6">
+                              <i class="fa-solid fa-school"></i>
+                              <h5 class="card-title fw-bold ">
+                               Gestiones
+                              </h5>
+                            </div>
+                            <div class="col-4">
+                              <h2 class="fw-bold text-center display-5">{{total}} </h2>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                
+                
+
+                  </div>
+                  
+                  <div class="row mt-5">
+                    <div class="col-12">
+                      <h4 class="text-grey font-italic">Opciones</h4>
+                    </div>
+                  </div>
+
+                  <!-- Botonera Accesos Rapidos -->
+                  <div class="row">
+                    <!-- Boton 1-Agrergar Nueva Gestion-->
+                    <div class="col-md-3 mb-4">
+                      <a href="/gestion/addG">
+                        <button onclick="mostrarModal()" class="btn btn-primary btn-lg fw-bold  text-dark">
+                        <div class="row">
+                          <div class="col-4">
+                            <i class="fa-solid fa-square-plus display-6 align-middle"></i>
+                          </div>
+                          <div class="col-6">
+                            Registrar Nueva Gestion
+                          </div>
+                        </div>
+                          </button>
+                      </a>
+                    </div>
+
+                    <div class="col-md-3 mb-4">
+                      <a href="/gestion/nuevaG">
+                        <button onclick="mostrarModal()" class="btn btn-primary btn-lg fw-bold  text-dark">
+                        <div class="row">
+                          <div class="col-4">
+                            <i class="fa-solid fa-square-plus display-6 align-middle"></i>
+                          </div>
+                          <div class="col-6">
+                            Realizar Una Gestion
+                          </div>
+                        </div>
+                          </button>
+                      </a>
+                    </div>
+
+                    
+
+                  </div>
+
+                </div>
+              </div>
+
+        </div>
+    </div>
